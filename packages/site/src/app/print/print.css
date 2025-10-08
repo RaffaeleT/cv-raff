@@ -1,0 +1,20 @@
+/* Print-specific overrides for clean PDF output */
+@page {
+  size: A4;
+  margin: 14mm 12mm;
+}
+
+/* Ensure consistent colors and remove screen-only spacing */
+@media print {
+  html, body { height: auto; }
+  body { background: #ffffff !important; }
+  main { padding: 0 !important; }
+  .prose { font-size: 11pt; }
+  .prose h1 { font-size: 20pt; margin-bottom: 4pt; }
+  .prose h2 { font-size: 12.5pt; margin-top: 14pt; }
+  .prose hr { margin: 10pt 0; }
+  .no-print { display: none !important; }
+  /* Avoid orphaned headings */
+  .prose h2, .prose h3 { break-after: avoid; }
+}
+
