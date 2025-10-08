@@ -22,9 +22,9 @@ Currently driving human-centered AI/ML adoption as both technological evolution 
 
 ## CORE COMPETENCIES
 
-**Leadership & Strategy**: Team Mentoring | Technology Scouting | Digital Transformation | Program Management
-**Technical Expertise**: Data Architecture & Engineering | Business Intelligence & Data Warehousing | AI/ML Implementation | API Design
-**Technology Stacks**: SQL Server, C#, Python, JavaScript, Azure DevOps | Azure Cloud Services | RAG, Prompt Engineering | REST APIs, ETL/Data Pipelines
+***Leadership & Strategy*** Team Mentoring | Technology Scouting | Digital Transformation | Program Management<br/>
+***Technical Expertise*** Data Architecture & Engineering | Business Intelligence & Data Warehousing | AI/ML Implementation | API Design<br/>
+***Technology Stacks*** SQL Server, C#, Python, Azure DevOps | Azure Cloud Services | RAG, Prompt Engineering | REST APIs, ETL/Data Pipelines
 
 ---
 
@@ -32,23 +32,23 @@ Currently driving human-centered AI/ML adoption as both technological evolution 
 
 ### B+B International | ERP Solutions for Packaging & Printing Industry
 
-**AI/ML Architect** | 2024 - present
-**Data Engineer** | 2019 - 2024
+**AI/ML Architect** | 2024 - present<br />
+**Data Engineer** | 2019 - 2024<br />
 **Business Intelligence Architect** | 2017 - 2019
 
 *Leading data integration initiatives and AI/ML program for 150+ enterprise customers*
 
-* Driving cross-functional teams through AI implementation lifecycle and change management
-* Implemented CI/CD pipelines cutting deployment time by 96%
+* Guiding cross-functional teams in AI implementation and change management
+* Implemented CI/CD pipelines cutting customer deployment time by 96%
 * Established R&D process integrating PoCs into production roadmap
 
 ### Syntegra | Data Integration
 **Chief Technology Officer** | 2013 - 2017
 
-*Technology strategy and development for healthcare, legal, and manufacturing sectors*
+*Technology strategy and development for healthcare and legal sectors*
 
 ### Affidea Italia | Healthcare Group
-**ICT Manager** | 2006 - 2012
+**ICT Manager** | 2006 - 2012<br />
 **Project Manager** | 1999 - 2006
 
 *IT leadership reporting to CEO*
@@ -64,7 +64,7 @@ AI/ML Trainer | Technical Trainer & Journalist | Data Architecture Consultant | 
 
 **AI-Powered ERP Assistant** (2025): RAG-based conversational AI reducing training overhead and improving tech support welfare.
 
-**Conversational AI for Business** (2024): AI assistant automating ERP operations through natural language.
+**Conversational AI for Business** (2024-2025): AI assistant automating ERP operations through natural language.
 
 **CAD-ERP Integration** (2021-2025, 2012-2014): CPQ (Configure-Price-Quote) integration automating BOM creation and pricing.
 
@@ -101,7 +101,7 @@ Italian (Native) | English (Fluent C1) | Danish (A2)
 
 ## ADDITIONAL
 
-**Community**: Pro-bono platform development for volunteering associations | Chairman, Local Public Library Committee
+**Community**: Pro-bono platform development for volunteering associations | Chairman, Local Public Library Committee<br />
 **Interests**: Macroeconomics & social impact | Change management | Foreign languages & etymology
 
 ---
