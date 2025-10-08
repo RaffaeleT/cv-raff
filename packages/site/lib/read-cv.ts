@@ -7,9 +7,6 @@ import { marked } from "marked";
 marked.setOptions({
   gfm: true,
   breaks: false,
-  headerIds: true,
-  mangle: false, // keep readable heading IDs
-  smartypants: true,
 });
 
 export function getCvHtml() {

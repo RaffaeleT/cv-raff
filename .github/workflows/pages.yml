@@ -39,8 +39,6 @@ jobs:
           GITHUB_PAGES: "true"
         run: |
           npm run build
-          # Ensure out/ exists even if postbuild didn't run
-          [ -d packages/site/out ] || npm run export
           # Prevent Jekyll from interfering with static assets
           touch packages/site/out/.nojekyll
 
@@ -59,4 +57,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-

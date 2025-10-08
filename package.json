@@ -5,7 +5,6 @@
   "scripts": {
     "dev": "npm --workspace packages/site run dev",
     "build": "npm -w packages/site run build",
-    "export": "npm -w packages/site run export",
     "pdf:md": "npm -w packages/pdf run from-md",
     "pdf:site": "npm -w packages/pdf run from-site"
   }
