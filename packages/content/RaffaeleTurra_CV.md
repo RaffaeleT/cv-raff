@@ -30,7 +30,7 @@ Currently driving human-centered AI/ML adoption as both technological evolution 
 
 ## PROFESSIONAL EXPERIENCE
 
-### B+B International | ERP Solutions for Packaging & Printing Industry
+![B+B logo](media/Azure-B+B-SquareLogo.png) ### B+B International | ERP Solutions for Packaging & Printing Industry
 
 **AI/ML Architect** | 2024 - present<br />
 **Data Engineer** | 2019 - 2024<br />
@@ -42,16 +42,19 @@ Currently driving human-centered AI/ML adoption as both technological evolution 
 * Implemented CI/CD pipelines cutting customer deployment time by 96%
 * Established R&D process integrating PoCs into production roadmap
 
-### Syntegra | Data Integration
+
+![Syntegra logo](media/syntegra.svg) ### Syntegra | Data Integration
 **Chief Technology Officer** | 2013 - 2017
 
 *Technology strategy and development for healthcare and legal sectors*
 
-### Affidea Italia | Healthcare Group
+
+![Affidea logo](media/affidea.svg) ### Affidea Italia | Healthcare Group
 **ICT Manager** | 2006 - 2012<br />
 **Project Manager** | 1999 - 2006
 
 *IT leadership reporting to CEO*
+
 
 ### Freelance Contractor & Consulting
 **1998 - Present**

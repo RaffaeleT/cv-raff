@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="logosandtypes_com" data-name="logosandtypes com" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 150 150">
+  <defs>
+    <style>
+      .cls-1 {
+        isolation: isolate;
+      }
+
+      .cls-2 {
+        fill: #4181d0;
+      }
+
+      .cls-3 {
+        clip-path: url(#clippath);
+      }
+
+      .cls-4 {
+        fill: none;
+      }
+
+      .cls-5 {
+        fill: url(#pattern);
+      }
+
+      .cls-6 {
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <clipPath id="clippath">
+      <path class="cls-4" d="M122.77,76h0M63.36,16.59h0c32.81,0,59.41,26.6,59.41,59.41h0c.03-32.78-26.51-59.37-59.28-59.41-.04,0-.08,0-.12,0"/>
+    </clipPath>
+    <pattern id="pattern" x="0" y="0" width="34.26" height="34.26" patternTransform="translate(28.6 1277.9)" patternUnits="userSpaceOnUse" viewBox="0 0 34.26 34.26">
+      <g>
+        <rect class="cls-4" width="34.26" height="34.26"/>
+        <image class="cls-1" width="60" height="60" transform="translate(0 34.26) scale(.57 -.57)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA9CAYAAADxoArXAAAACXBIWXMAABNgAAATYAHPOukjAAAApElEQVRoge3PQQ7CMAwAQcP/P0xsJ6gJB3gACK12pMpOe0j3ttZa8WbOFT1X1PX0jO65Z1Wf2b337oqqisqK3DPPt8zIa88RVfk6j3N+7b3n47wfGVUjPv/ie+6/ueZ/GExnMJ3BdAbTGUxnMJ3BdAbTGUxnMJ3BdAbTGUxnMJ3BdAbTGUxnMJ3BdAbTGUxnMJ3BdAbTGUxnMJ3BdAbTGSySiHgCp/hfBkTU3g0AAAAASUVORK5CYII="/>
+      </g>
+    </pattern>
+    <linearGradient id="linear-gradient" x1="63.35" y1="76" x2="122.77" y2="76" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#4181d0"/>
+      <stop offset=".85" stop-color="#325077"/>
+    </linearGradient>
+  </defs>
+  <path class="cls-4" d="M0,0H150V150H0V0Z"/>
+  <path id="Path_551" data-name="Path 551" class="cls-2" d="M63.36,16.59c32.81,0,59.41,26.6,59.41,59.41s-26.6,59.41-59.41,59.41S3.95,108.81,3.95,76h0c0-32.81,26.6-59.41,59.41-59.41"/>
+  <g class="cls-3">
+    <rect id="Rectangle_54" data-name="Rectangle 54" class="cls-5" x="61.4" y="15.29" width="62.67" height="62.67"/>
+  </g>
+  <path class="cls-6" d="M122.77,76c0,32.82-26.6,59.4-59.42,59.4V16.6c32.82,0,59.42,26.6,59.42,59.4Z"/>
+  <path id="Path_554" data-name="Path 554" class="cls-2" d="M146.05,133.88h-47.44L63.36,16.59h47.44l35.25,117.29Z"/>
+</svg>
