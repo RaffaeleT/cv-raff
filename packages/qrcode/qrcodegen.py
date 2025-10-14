@@ -1,4 +1,4 @@
 import qrcode
-img = qrcode.make('https://raffaelet.github.io/cv-raff')
+img = qrcode.make('http://resume.raffaeleturra.com/')
 type(img)  # qrcode.image.pil.PilImage
 img.save("packages/content/media/qrcode.png")
