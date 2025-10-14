@@ -45,20 +45,6 @@ jobs:
           # Prevent Jekyll from interfering with static assets
           touch packages/site/out/.nojekyll
 
-      - name: Mirror output into repository subfolder
-        shell: bash
-        run: |
-          set -euo pipefail
-          REPO_NAME="${GITHUB_REPOSITORY##*/}"
-          if [ -z "${REPO_NAME}" ]; then
-            echo "Unable to detect repository name from GITHUB_REPOSITORY"
-            exit 1
-          fi
-          cd packages/site/out
-          rm -rf "${REPO_NAME}"
-          mkdir "${REPO_NAME}"
-          find . -mindepth 1 -maxdepth 1 ! -name "${REPO_NAME}" -exec cp -R {} "${REPO_NAME}/" \;
-
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
