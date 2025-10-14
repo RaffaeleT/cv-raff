@@ -1,3 +1,5 @@
+import fs from "node:fs";
+import path from "node:path";
 import type { NextConfig } from "next";
 
 // Configure basePath/assetPrefix dynamically for GitHub Pages project sites
@@ -6,6 +8,8 @@ const repo = process.env.GITHUB_REPOSITORY?.split("/")[1];
 const isUserOrOrgSite = !!repo && repo.endsWith(".github.io");
 
 const explicitBasePath = process.env.NEXT_BASE_PATH ?? process.env.NEXT_PUBLIC_BASE_PATH;
+const forceBasePath = process.env.NEXT_FORCE_BASE_PATH === "true";
+const hasCustomDomain = fs.existsSync(path.join(__dirname, "public", "CNAME"));
 
 const sanitizeBasePath = (value?: string) => {
   if (!value) return undefined;
@@ -13,9 +17,18 @@ const sanitizeBasePath = (value?: string) => {
   return normalized.replace(/\/+$/, "");
 };
 
-const computedBasePath =
-  sanitizeBasePath(explicitBasePath) ??
-  (isGithub && repo && !isUserOrOrgSite ? `/${repo}` : undefined);
+const sanitizedExplicit = sanitizeBasePath(explicitBasePath);
+const repoBasePath = repo ? `/${repo}` : undefined;
+
+const computedBasePath = forceBasePath
+  ? sanitizedExplicit ?? repoBasePath
+  : sanitizedExplicit !== undefined
+    ? hasCustomDomain && sanitizedExplicit === repoBasePath
+      ? undefined
+      : sanitizedExplicit
+    : !hasCustomDomain && isGithub && repo && !isUserOrOrgSite
+      ? repoBasePath
+      : undefined;
 
 const nextConfig: NextConfig = {
   // Static export to `out/`
