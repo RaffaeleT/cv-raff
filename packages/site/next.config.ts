@@ -4,7 +4,18 @@ import type { NextConfig } from "next";
 const isGithub = process.env.GITHUB_PAGES === "true" || process.env.GITHUB_ACTIONS === "true";
 const repo = process.env.GITHUB_REPOSITORY?.split("/")[1];
 const isUserOrOrgSite = !!repo && repo.endsWith(".github.io");
-const computedBasePath = isGithub && repo && !isUserOrOrgSite ? `/${repo}` : undefined;
+
+const explicitBasePath = process.env.NEXT_BASE_PATH ?? process.env.NEXT_PUBLIC_BASE_PATH;
+
+const sanitizeBasePath = (value?: string) => {
+  if (!value) return undefined;
+  const normalized = value.startsWith("/") ? value : `/${value}`;
+  return normalized.replace(/\/+$/, "");
+};
+
+const computedBasePath =
+  sanitizeBasePath(explicitBasePath) ??
+  (isGithub && repo && !isUserOrOrgSite ? `/${repo}` : undefined);
 
 const nextConfig: NextConfig = {
   // Static export to `out/`
