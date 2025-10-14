@@ -7,11 +7,20 @@ export default function Page() {
   type AccentStyle = CSSProperties & { [key in "--accent"]?: string };
   const style: AccentStyle | undefined = meta?.accent ? { ["--accent"]: meta.accent } : undefined;
 
-  // Insert video after LinkedIn link
-  const htmlWithVideo = (html as string).replace(
-    /(<a href="https:\/\/www\.linkedin\.com\/in\/datacurious\/">.*?<\/a>)/,
-    '$1\n\n<video width="100%" controls style="margin-top: 1rem; max-width: 800px;">\n  <source src="https://www.dropbox.com/scl/fi/6d197pfkj0wjbh8k7e0lk/raffaele.mp4?rlkey=a64a2941zi5sblt6egdrp1m6j&st=dmy0wfwg&raw=1" type="video/mp4">\n  Your browser does not support the video tag.\n</video>'
-  );
+  const videoSrc =
+    process.env.NEXT_PUBLIC_VIDEO_SAS_URL ??
+    process.env.NEXT_VIDEO_BLOB_SAS_URL ??
+    "";
+  const htmlString = typeof html === "string" ? html : String(html ?? "");
+
+  // Insert Azure-hosted video (if configured) right after the LinkedIn link
+  const htmlWithVideo =
+    videoSrc !== ""
+      ? htmlString.replace(
+          /(<a href="https:\/\/www\.linkedin\.com\/in\/datacurious\/">.*?<\/a>)/,
+          `$1\n\n<video width="100%" controls playsinline preload="metadata" style="margin-top: 1rem; max-width: 800px;">\n  <source src="${videoSrc}" type="video/mp4">\n  Your browser does not support the video tag.\n</video>`
+        )
+      : htmlString;
 
   return (
     <main

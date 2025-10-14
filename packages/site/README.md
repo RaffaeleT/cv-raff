@@ -20,6 +20,10 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+### Streaming CV video from Azure Blob Storage
+
+Set either `NEXT_PUBLIC_VIDEO_SAS_URL` or `NEXT_VIDEO_BLOB_SAS_URL` (for example in `.env.local`) to the full Azure Blob SAS URL that serves the CV video. When one of these values is present the site will render an HTML `<video>` element, without committing the SAS token to the repository, right after the LinkedIn link in the CV.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
