@@ -4,9 +4,6 @@ on:
   push:
     branches: [ main ]
   workflow_dispatch:
-env:
-  # Setting an environment variable with the value of a configuration variable
-  NEXT_PUBLIC_VIDEO_SAS_URL: ${{ vars.NEXT_PUBLIC_VIDEO_SAS_URL }}
 
 permissions:
   contents: read
@@ -40,6 +37,8 @@ jobs:
         env:
           # Signals Next.js to set basePath/assetPrefix for project pages
           GITHUB_PAGES: "true"
+          # Pass the video URL to Next.js build
+          NEXT_PUBLIC_VIDEO_SAS_URL: ${{ vars.NEXT_PUBLIC_VIDEO_SAS_URL }}
         run: |
           npm run build
           # Prevent Jekyll from interfering with static assets
