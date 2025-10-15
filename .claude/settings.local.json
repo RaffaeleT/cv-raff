@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nfix: pass NEXT_PUBLIC_VIDEO_SAS_URL to build step for GitHub Pages\n\nThe environment variable needs to be available during the Next.js build\nstep to be embedded in the static output. Removed redundant workflow-level\nenv definition and added it directly to the build step where it''s needed.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(gh run list:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
