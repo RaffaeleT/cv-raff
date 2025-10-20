@@ -1,0 +1,120 @@
+/* PDF styles matching Next.js site globals.css */
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans", sans-serif;
+  font-size: 11pt;
+  line-height: 1.65;
+  color: #111827;
+  background: #ffffff;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Prose container styles */
+h1, h2, h3 {
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #111827;
+}
+
+h1 {
+  font-size: 20pt;
+  margin: 0 0 4pt;
+}
+
+h2 {
+  font-size: 12.5pt;
+  margin: 14pt 0 0.75rem;
+  position: relative;
+}
+
+/* Section header accent underline - matching the site's h2::after */
+h2::after {
+  content: "";
+  display: block;
+  width: 2.5rem;
+  height: 3px;
+  margin-top: 0.4rem;
+  background: #0ea5e9;
+  border-radius: 999px;
+}
+
+h3 {
+  font-size: 11pt;
+  margin: 1.25rem 0 0.5rem;
+}
+
+p {
+  margin: 0.75rem 0;
+  color: #111827;
+}
+
+strong {
+  font-weight: 700;
+}
+
+em {
+  font-style: italic;
+}
+
+ul {
+  list-style: disc;
+  padding-left: 1.25rem;
+  margin: 0.5rem 0 1rem;
+}
+
+ol {
+  list-style: decimal;
+  padding-left: 1.25rem;
+  margin: 0.5rem 0 1rem;
+}
+
+li {
+  margin: 0.25rem 0;
+}
+
+a {
+  color: #0ea5e9;
+  text-decoration: none;
+}
+
+/* Hide the URL text after links to avoid duplication */
+a[href]:after {
+  content: none !important;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #e5e7eb, transparent);
+  margin: 10pt 0;
+}
+
+blockquote {
+  border-left: 3px solid #0ea5e9;
+  margin: 1rem 0;
+  padding: 0.25rem 1rem;
+  color: #5b5b5b;
+  font-style: italic;
+  background: rgba(14, 165, 233, 0.06);
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  background: rgba(17, 24, 39, 0.06);
+  padding: 0.1rem 0.35rem;
+  border-radius: 0.25rem;
+  font-size: 0.95em;
+}
+
+small, .meta {
+  color: #5b5b5b;
+  font-size: 0.9em;
+}
+
+/* Avoid orphaned headings */
+h2, h3 {
+  page-break-after: avoid;
+  break-after: avoid;
+}

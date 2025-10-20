@@ -1,6 +1,7 @@
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+const markdownpdf = require('markdown-pdf');
 
 // Parse command line arguments
 const args = process.argv.slice(2);
@@ -20,6 +21,7 @@ for (let i = 0; i < args.length; i++) {
 // Validate arguments
 if (!inputFile || !outputFile) {
   console.error('Usage: node build.js --input <input.md> --output <output.docx>');
+  console.error('Note: Both DOCX and PDF files will be generated');
   process.exit(1);
 }
 
@@ -32,6 +34,15 @@ if (!fs.existsSync(inputFile)) {
   console.error(`\n❌ Input file not found: ${inputFile}\n`);
   process.exit(1);
 }
+
+// Pre-process markdown to handle HTML br tags
+// markdown-docx doesn't handle HTML tags well, so we need to convert them
+const tempInputFile = path.join(__dirname, '.temp_processed.md');
+const markdownContent = fs.readFileSync(inputFile, 'utf8');
+// Replace <br /> and <br/> with double spaces + newline (markdown line break)
+const processedContent = markdownContent
+  .replace(/<br\s*\/?>/gi, '  \n');
+fs.writeFileSync(tempInputFile, processedContent, 'utf8');
 
 // Check if output file is locked/open
 function isFileLocked(filePath) {
@@ -52,32 +63,75 @@ function isFileLocked(filePath) {
   }
 }
 
-console.log(`Building: ${path.basename(inputFile)} -> ${path.basename(outputFile)}`);
+// Derive PDF output path from DOCX output path
+const pdfOutputFile = outputFile.replace(/\.docx$/, '.pdf');
 
-// Check if output file is locked
+console.log(`Building: ${path.basename(inputFile)}`);
+console.log(`  -> ${path.basename(outputFile)}`);
+console.log(`  -> ${path.basename(pdfOutputFile)}`);
+
+// Check if output files are locked
 if (isFileLocked(outputFile)) {
-  console.error('\n❌ Build failed: Output file is currently open or locked.');
+  console.error('\n❌ Build failed: DOCX output file is currently open or locked.');
   console.error(`   Please close: ${outputFile}`);
   console.error('   Then try building again.\n');
   process.exit(1);
 }
 
-// Run the build
+if (isFileLocked(pdfOutputFile)) {
+  console.error('\n❌ Build failed: PDF output file is currently open or locked.');
+  console.error(`   Please close: ${pdfOutputFile}`);
+  console.error('   Then try building again.\n');
+  process.exit(1);
+}
+
+// Run the DOCX build
 try {
-  execSync(`markdown-docx --input "${inputFile}" --output "${outputFile}"`, {
+  console.log('\n📄 Generating DOCX...');
+  execSync(`markdown-docx --input "${tempInputFile}" --output "${outputFile}"`, {
     stdio: 'inherit',
     cwd: __dirname
   });
-  console.log('\n✅ Build completed successfully!\n');
+  console.log('✅ DOCX generated successfully!');
 } catch (err) {
+  // Clean up temp file
+  if (fs.existsSync(tempInputFile)) {
+    fs.unlinkSync(tempInputFile);
+  }
   // Check if the error might be due to file lock
   if (err.code === 'EBUSY' || err.code === 'EPERM' || err.code === 'EACCES') {
-    console.error('\n❌ Build failed: Unable to write to output file.');
+    console.error('\n❌ DOCX build failed: Unable to write to output file.');
     console.error('   The file might be open in another application.');
     console.error(`   Please close: ${outputFile}\n`);
   } else {
-    console.error('\n❌ Build failed with error:\n');
+    console.error('\n❌ DOCX build failed with error:\n');
     console.error(err.message);
   }
   process.exit(1);
 }
+
+// Generate PDF with custom styling
+console.log('\n📄 Generating PDF...');
+
+const pdfOptions = {
+  cssPath: path.join(__dirname, 'pdf-styles.css'),
+  paperFormat: 'A4',
+  paperOrientation: 'portrait',
+  paperBorder: '2cm',
+  runningsPath: path.join(__dirname, 'pdf-runnings.js')
+};
+
+markdownpdf(pdfOptions).from(tempInputFile).to(pdfOutputFile, (err) => {
+  // Clean up temp file
+  if (fs.existsSync(tempInputFile)) {
+    fs.unlinkSync(tempInputFile);
+  }
+
+  if (err) {
+    console.error('\n❌ PDF build failed with error:\n');
+    console.error(err.message);
+    process.exit(1);
+  }
+  console.log('✅ PDF generated successfully!');
+  console.log('\n✅ Build completed successfully!\n');
+});

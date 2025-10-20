@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "description": "CV document generator",
   "scripts": {
-    "build": "node build.js --input code/RaffaeleTurra_CV.md --output dist/RaffaeleTurra_CV.docx"
+    "build": "node build.js --input ../content/RaffaeleTurra_CV.md --output dist/RaffaeleTurra_CV.docx"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "markdown-docx": "^1.3.1"
+    "markdown-docx": "^1.3.1",
+    "markdown-pdf": "^11.0.0"
   }
 }
