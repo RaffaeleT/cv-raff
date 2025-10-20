@@ -56,7 +56,7 @@ Currently driving human-centered AI/ML adoption as both technological evolution 
 ### Freelance Contractor & Consulting
 **1998 - Present**
 
-AI/ML Trainer | Technical Trainer & Journalist | Data Architecture Consultant | Full-Stack Developer | Product Management
+*AI/ML Trainer | Technical Trainer & Journalist | Data Architecture Consultant | Product Management*
 
 ---
 
@@ -66,7 +66,7 @@ AI/ML Trainer | Technical Trainer & Journalist | Data Architecture Consultant | 
 
 **Conversational AI for Business** (2024-2025): AI assistant automating ERP operations through natural language.
 
-**CAD-ERP Integration** (2021-2025, 2012-2014): CPQ (Configure-Price-Quote) integration automating BOM creation and pricing.
+**CAD-ERP Integration** (2021-2025, 2012-2014): CPQ (Configure-Price-Quote) integrations automating BOM creation and pricing.
 
 **Customers Data Warehouses** (2017-2022): Industrialized BI platform
 
@@ -87,7 +87,7 @@ AI/ML Trainer | Technical Trainer & Journalist | Data Architecture Consultant | 
 
 **Academic**
 
-* Master's Degree in Forestry & Environmental Sciences (GIS) | University of Padova (1993-2000)
+* Master's Degree in Forestry & Environmental Sciences - Specialization in Geographic Information Systems | University of Padova (1993-2000)
 
 **Certifications**: Microsoft Certified Technology Specialist: SQL Server Developer | Google Analytics
 
@@ -95,7 +95,7 @@ AI/ML Trainer | Technical Trainer & Journalist | Data Architecture Consultant | 
 
 ## LANGUAGES
 
-Italian (Native) | English (Fluent C1) | Danish (A2)
+Italian (Native) | English (Fluent) | Danish (Beginner)
 
 ---
 
