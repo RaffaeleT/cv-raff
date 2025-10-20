@@ -78,18 +78,22 @@ Currently driving human-centered AI/ML adoption as both technological evolution 
 
 ## EDUCATION
 
+**Academic**
+
+* Candidate Master in Business Administration | POLIMI Graduate School of Management (2024-2026)
+* Master's Degree in Forestry & Environmental Sciences - Specialization in Geographic Information Systems | University of Padova (1993-2000)
+
 **Executive Programs**
 
-* Digital Innovation & Change Management | POLIMI (2021-2022)
+* Digital Innovation & Change Management | POLIMI Graduate School of Management (2021-2022)
 * AI & Machine Learning for Business | Bologna Business School (2019)
 * Leadership Development | University of Delft (2015-2016)
 * Business Intelligence & Performance Management | Bologna Business School (2012)
 
-**Academic**
+**Certifications**: 
 
-* Master's Degree in Forestry & Environmental Sciences - Specialization in Geographic Information Systems | University of Padova (1993-2000)
-
-**Certifications**: Microsoft Certified Technology Specialist: SQL Server Developer | Google Analytics
+* Microsoft Certified Technology Specialist: SQL Server Developer 
+* Google Analytics
 
 ---
 
@@ -102,7 +106,7 @@ Italian (Native) | English (Fluent) | Danish (Beginner)
 ## ADDITIONAL
 
 **Community**: Pro-bono platform development for volunteering associations | Chairman, Local Public Library Committee<br />
-**Interests**: Macroeconomics & social impact | Change management | Foreign languages & etymology
+**Interests**: Macroeconomics & social impact | Change management | Sea Kayaking
 
 ---
 
