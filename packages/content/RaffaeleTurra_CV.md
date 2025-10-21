@@ -2,7 +2,7 @@
 
 **Change Agent & Mentor | Technology Adoption & Organizational Readiness**
 
-Via Montecarlo 5, Piazzola sul Brenta (PD), Italy
+Greater Padova Metropolitan Area, Italy
 
 contatti@raffaeleturra.com | 0039 348 3106254
 
